@@ -38,10 +38,10 @@ export const shake = keyframes`
 
 export const neon = keyframes`
     from {
-        text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #FF1177, 0 0 70px #FF1177, 0 0 80px #FF1177, 0 0 100px #FF1177, 0 0 150px #FF1177;
+        text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #CB1957, 0 0 70px #CB1957, 0 0 80px #CB1957, 0 0 100px #CB1957, 0 0 150px #CB1957;
     }
     to {
-        text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #FF1177, 0 0 35px #FF1177, 0 0 40px #FF1177, 0 0 50px #FF1177, 0 0 75px #FF1177;
+        text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #CB1957, 0 0 35px #CB1957, 0 0 40px #CB1957, 0 0 50px #CB1957, 0 0 75px #CB1957;
     }
 `;
 

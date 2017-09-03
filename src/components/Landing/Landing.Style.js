@@ -8,13 +8,12 @@ export const MainTitle = styled.div`
     align-items: center;
     flex-flow: column;
     text-align: center;
-    background-color: rgba(52,73,94,.2);
-    width: 100%;
+    border: 3px dashed white;
+    width: 80%;
     height: 500px;
 `;
 
 export const A = styled.a`
-    padding: .5em .5em;
     cursor: pointer;
     -webkit-transition: all 0.5s;
     -moz-transition: all 0.5s;
@@ -26,14 +25,18 @@ export const Neon = styled.p`
     &:nth-child(1) a {
         color: #fff;
         font-family: 'Monoton';
-        font-size: 12rem;
+        font-size: 14rem;
         -webkit-animation: ${neon} 1.5s ease-in-out infinite alternate;
         -moz-animation: ${neon} 1.5s ease-in-out infinite alternate;
         animation: ${neon} 1.5s ease-in-out infinite alternate;
+
+        @media screen and (max-width : 768px) {
+            font-size: 6rem;
+        }
     }
 
     &:nth-child(1) a:hover {
-        color: #FF1177;
+        color: #CB1957;
         -webkit-animation: none;
         -moz-animation: none;
         animation: none;
@@ -41,7 +44,7 @@ export const Neon = styled.p`
 
     &:hover, &:focus .shake {
         -webkit-animation-name: ${shake};
-        -webkit-animation-duration: 2s;
+        -webkit-animation-duration: 5s;
         -webkit-transform-origin: 50% 50%;
         -webkit-animation-iteration-count: infinite;
         -webkit-animation-timing-function: linear;  
