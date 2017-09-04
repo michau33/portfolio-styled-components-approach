@@ -3,6 +3,9 @@ import styled, { keyframes } from 'styled-components';
 const iconSize = '2rem';
 const colorPink = '203, 25, 87';
 
+const primary = '#D6004B';
+const primary_2 = '#CB1957';
+
 // -------------------------
 // EXPORT SECTION 
 // -------------------------
@@ -30,7 +33,7 @@ const pulseIcon = keyframes`
 
 const pulseHome = keyframes`
     100% {
-        box-shadow: inset 0px 0px 0px 30px rgba(25, 243, 163, .8);
+        box-shadow: inset 0px 0px 0px 30px rgba(${colorPink}, .8);
     }  
 `;
 
@@ -44,12 +47,12 @@ export const Icon = styled.span`
     height: 50px;
     top: 0px;
     padding: 0px 12px;
-    border-left: 1px dotted #19F3A3;
+    border-left: 1px dotted ${primary};
     cursor: pointer;
     transition: background-color 1s;
  
     &.fa-linkedin {
-        border-right: 1px dotted #19F3A3;
+        border-right: 1px dotted ${primary};
     }
 
     &:hover, &:focus {
@@ -67,24 +70,24 @@ export const Icon = styled.span`
 `;
 
 export const HomeIcon = Icon.extend`
-    border-right: 1px dotted #19F3A3;
+    border-right: 1px dotted ${primary};
     left: 25px;
     &:hover, &:focus {
         animation: ${pulseHome} .5s;
         animation-fill-mode: forwards;
-        text-shadow: 0px 0px 20px #19F3A3;
+        text-shadow: 0px 0px 20px ${primary};
     }
 `;
 
 export const NavTitle = styled.span`
-    color: #19F3A3;
+    color: ${primary};
     font-family: 'Press Start 2P';
     font-weight: bold;
     font-size: 1.8rem;
-    text-shadow: 0px 0px 20px #19F3A3;
+    text-shadow: 0px 0px 20px ${primary};
 
     @media screen and (max-width: 768px) {
-        font-size: 1.2rem;
+        font-size: 1rem;
     }
 `;
 

@@ -2,15 +2,30 @@ import styled from 'styled-components';
 import { shake, neon, pulse } from './Landing.Style.Keyframes';
 import bg from '../../assets/street.jpg';
 
+const primary = '#D6004B';
+const primary_2 = '#CB1957';
+const colorCyan = '#19F3A3';
+
+export const LandingSection = styled.div`
+    background: url(${bg});
+    background-size: cover;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column;
+`;
+
 export const MainTitle = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
     flex-flow: column;
     text-align: center;
-    border: 3px dashed white;
+    border: 1px dashed ${primary};
     width: 80%;
-    height: 500px;
+    height: 300px;
 `;
 
 export const A = styled.a`
@@ -25,13 +40,22 @@ export const Neon = styled.p`
     &:nth-child(1) a {
         color: #fff;
         font-family: 'Monoton';
-        font-size: 14rem;
+        font-size: 10rem;
         -webkit-animation: ${neon} 1.5s ease-in-out infinite alternate;
         -moz-animation: ${neon} 1.5s ease-in-out infinite alternate;
         animation: ${neon} 1.5s ease-in-out infinite alternate;
+        transition: font-size .5s;
 
-        @media screen and (max-width : 768px) {
+        @media screen and (max-width : 1224px) {
+            font-size: 8rem;
+        }
+
+        @media screen and (max-width: 768px) {
             font-size: 6rem;
+        }
+
+        @media screen and (max-width: 615px) {
+            font-size: 3rem;
         }
     }
 
@@ -42,72 +66,23 @@ export const Neon = styled.p`
         animation: none;
     }
 
-    &:hover, &:focus .shake {
-        -webkit-animation-name: ${shake};
-        -webkit-animation-duration: 5s;
-        -webkit-transform-origin: 50% 50%;
-        -webkit-animation-iteration-count: infinite;
-        -webkit-animation-timing-function: linear;  
+    &:hover, &:focus {
+        &:nth-child(1) a {
+            font-size: 11rem;
+            font-weight: bold;
+        }
     }      
-`
-
-export const LandingPage = styled.div`
-    background: url(${bg});
-    background-size: cover;
-    width: 100%;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-flow: column;
 `;
 
-export const LandingLogo = styled.div`
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    background-color: rgba( 48, 255, 165, .1);
-    width: 500px;
-    height: 250px;
-    cursor: pointer;
-    transition: box-shadow 3s, border-radius 3s;
-    
-    &:hover, &:focus .shake {
-        box-shadow: inset 0 20em 0 0 rgba(0,255,216, .2);
-        -webkit-animation-name: ${shake};
-        -webkit-animation-duration: 1s;
-        -webkit-transform-origin: 50% 50%;
-        -webkit-animation-iteration-count: infinite;
-        -webkit-animation-timing-function: linear;  
-        border-radius: 20px;
-    }  
-
-    @media screen and (max-width : 768px) {
-        width: 100%;
-    }
-`;
-
-export const LogoText = styled.span`
-    color: white;
-    font-family: 'Roboto', sans-serif;
-    font-weight: bold;
-    font-size: 8rem;
-    text-shadow: 2px 2px 10px black;
-    text-shadow: 1px 4px 6px #CB1957, 0 0 0 #000, 1px 4px 6px #CB1957;
-`;
-
-const colorCyan = '#19F3A3';
-
-export const MoreButton = styled.button`
+export const Button = styled.button`
     margin-top: 50px;
-    background-color: #CB1957;
+    background-color: ${primary};
     cursor: pointer;
     font-family: 'Roboto', sans-serif;
     font-size: 2rem;
     font-weight: bold;
     text-shadow: 2px 2px 5px black;
-    border: 1px solid #CB1957;
+    border: 1px solid ${primary};
     border-radius: 0px;
     color: white;
     text-transform: uppercase;
@@ -116,7 +91,7 @@ export const MoreButton = styled.button`
     transition: color 1s, background-color 1s;
 
     &:hover {
-        color: #CB1957;
+        color: ${primary};
         background-color: transparent;
     }
 
@@ -126,6 +101,3 @@ export const MoreButton = styled.button`
         background-color: rgba( #34495E, 0.2 );
     }   
 `;
-
-
-

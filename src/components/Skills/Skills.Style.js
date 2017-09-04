@@ -3,7 +3,7 @@ import bg from '../../assets/caspar.jpg';
 import frontendBackground from '../../assets/coding_2_lr.jpg';
 import gamedevBackground from '../../assets/gaming_lr.jpg';
 
-export const SkillsPage = styled.div`
+export const SkillsSection = styled.section`
     background: url( ${ bg } );
     background-size: cover;
     background-position: center center;

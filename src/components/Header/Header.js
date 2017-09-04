@@ -10,7 +10,7 @@ export default class Header extends Component {
             <Navigation>
                 <Container className="container-fluid">
                     <Link to="/" style={ { textDecoration: 'none' } }><HomeIcon className="fa fa-home"></HomeIcon></Link>
-                    <TypeWriter typing={ 1 } fixed={true} minDelay={ 50 } maxDelay={ 300 }><NavTitle>MichalDev</NavTitle></TypeWriter>
+                        <TypeWriter typing={ 1 } fixed={true} minDelay={ 50 } maxDelay={ 300 }><NavTitle>Home</NavTitle></TypeWriter>
                     <IconsRight>
                         <a href="https://www.instagram.com/gamedevguy/" target="_blank" style={ { textDecoration: 'none' } }>
                             <Icon className="fa fa-instagram"></Icon>
