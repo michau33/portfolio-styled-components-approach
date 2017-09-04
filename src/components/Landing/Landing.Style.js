@@ -1,14 +1,19 @@
 import styled from 'styled-components';
 import { shake, neon, pulse } from './Landing.Style.Keyframes';
-import bg from '../../assets/street.jpg';
+import bg from '../../assets/bg.jpg';
 
-const primary = '#D6004B';
+const tomato = '#ff6347';
+export const primary = tomato;
 const primary_2 = '#CB1957';
+const primary_3 = '#D6004B';
 const colorCyan = '#19F3A3';
 
 export const LandingSection = styled.div`
     background: url(${bg});
     background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
     width: 100%;
     height: 100vh;
     display: flex;
@@ -60,7 +65,7 @@ export const Neon = styled.p`
     }
 
     &:nth-child(1) a:hover {
-        color: #CB1957;
+        color: ${primary};
         -webkit-animation: none;
         -moz-animation: none;
         animation: none;

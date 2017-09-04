@@ -3,8 +3,10 @@ import styled, { keyframes } from 'styled-components';
 const iconSize = '2rem';
 const colorPink = '203, 25, 87';
 
-const primary = '#D6004B';
-const primary_2 = '#CB1957';
+const primary = '#ff6347';
+const primary_2 = '#D6004B';
+const primary_3 = '#CB1957';
+const colorCyan = '#19F3A3';
 
 // -------------------------
 // EXPORT SECTION 
@@ -27,13 +29,13 @@ export const Navigation = styled.nav`
 
 const pulseIcon = keyframes`
     100% {
-        box-shadow: inset 0px 0px 0px 30px rgba(${colorPink}, .8);
+        box-shadow: inset 0px 0px 0px 30px rgba( 255, 99, 71, .8);
     }  
 `;
 
 const pulseHome = keyframes`
     100% {
-        box-shadow: inset 0px 0px 0px 30px rgba(${colorPink}, .8);
+        box-shadow: inset 0px 0px 0px 30px rgba( 255, 99, 71, .8);
     }  
 `;
 
@@ -80,11 +82,11 @@ export const HomeIcon = Icon.extend`
 `;
 
 export const NavTitle = styled.span`
-    color: ${primary};
-    font-family: 'Press Start 2P';
+    color: ${colorCyan};
+    font-family: 'VT323';
     font-weight: bold;
-    font-size: 1.8rem;
-    text-shadow: 0px 0px 20px ${primary};
+    font-size: 2rem;
+    text-shadow: 0px 0px 20px ${colorCyan};
 
     @media screen and (max-width: 768px) {
         font-size: 1rem;

@@ -6,6 +6,7 @@ import TypeWriter from 'react-typewriter';
 
 const Landing = () => {
     return(
+        <div className="Landing">
         <LandingSection>
             <MainTitle>
                 <Neon>
@@ -16,6 +17,8 @@ const Landing = () => {
             </MainTitle>
                 <Link to="skills"><Button className="btn pulse">More</Button></Link>
         </LandingSection>
+        <div style={{ height: '500px', width: '100%', backgroundColor: 'tomato'}}></div>
+        </div>
     );
 }
 

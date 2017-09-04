@@ -3,6 +3,9 @@ import bg from '../../assets/caspar.jpg';
 import frontendBackground from '../../assets/coding_2_lr.jpg';
 import gamedevBackground from '../../assets/gaming_lr.jpg';
 
+const primary = 'tomato';
+const primaryRGB = '255, 99, 71'
+
 export const SkillsSection = styled.section`
     background: url( ${ bg } );
     background-size: cover;
